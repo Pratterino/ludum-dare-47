@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
 
     // Consts
-    private const float MOVEMENT_SPEED = 28f;
+    private const float MOVEMENT_SPEED = 30f;
     private const float JUMPFORCE = 80f;
 
     private bool isMovementEnabled = false;
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
 
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, 15); // Stop player from falling too fast and clip through platforms.
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, 20); // Stop player from falling too fast and clip through platforms.
     }
 
     void LateUpdate()
@@ -60,11 +60,6 @@ public class PlayerMovement : MonoBehaviour
         {
 
         }
-    }
-
-    void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, JUMPFORCE * rb.gravityScale);
     }
 
     public void EnableMovement(bool movementEnabled, bool gameDone = false)

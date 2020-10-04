@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
     private float minSizeY = 10;
-    private float maxSizeY = 25;
+    private float maxSizeY = 50;
     private GameObject[] players;
     private float playerWidth;
-    
+    private float timeElapsed;
+    const int xValueTrigger = 134;
+
     void Start()
     {
         minSizeY = Camera.main.orthographicSize;
@@ -42,7 +45,19 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        SetCameraPos();
-        SetCameraSize();
+
+
+        if (players[0].transform.position.x >= xValueTrigger || players[1].transform.position.x >= xValueTrigger)
+        {
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 95, 10f / timeElapsed);
+            Camera.main.transform.position = new Vector3(150f, -81f, Camera.main.transform.position.z);
+
+            timeElapsed += Time.deltaTime;
+        }
+        else
+        {
+            SetCameraPos();
+            SetCameraSize();
+        }
     }
 }

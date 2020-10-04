@@ -7,10 +7,12 @@ public class GravityLogic : MonoBehaviour
    void OnTriggerEnter2D(Collider2D collision)
    {
         collision.attachedRigidbody.gravityScale = -3;
+        if (collision.CompareTag("Player")) collision.transform.parent.Rotate(0, 0, 180);
    }
-   
-   void OnTriggerExit2D(Collider2D collision)
+
+    void OnTriggerExit2D(Collider2D collision)
    {
         collision.attachedRigidbody.gravityScale = 3;
-   }
+        if (collision.CompareTag("Player")) collision.transform.parent.Rotate(0, 0, -180);
+    }
 }

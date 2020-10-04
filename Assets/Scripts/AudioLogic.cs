@@ -2,25 +2,33 @@
 
 public class AudioLogic : MonoBehaviour
 {
-    public AudioClip[] platformBreakSounds;
-    public AudioClip[] hitSounds;
+
+    public AudioClip deadSound;
+    public AudioClip coinSound;
+    public AudioClip music;
     
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
-    public void PlayPlatformBreakSound()
+    public void PlayDeadSound()
     {
-        audioSource.clip = platformBreakSounds[0];
+        audioSource.clip = deadSound;
+        audioSource.Play();
+    }    
+    
+    public void PlayMusic()
+    {
+        audioSource.clip = music;
         audioSource.Play();
     }
     
-    public void PlayHitSound()
+    public void PlayCoinSound()
     {
-        audioSource.clip = hitSounds[0];
+        audioSource.clip = coinSound;
         audioSource.Play();
     }
 }
