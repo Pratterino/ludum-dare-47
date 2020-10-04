@@ -2,7 +2,7 @@
 
 Mirror mirror (Ludum Dare 47)
 
-Play: https://ldjam.com/events/ludum-dare/47/$224975
+Play: https://pratterino.itch.io/mirror-mirror-ldjam-47
 
 Ludum page: https://ldjam.com/events/ludum-dare/47/mirror-mirror
 
