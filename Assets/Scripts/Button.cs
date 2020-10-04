@@ -12,13 +12,7 @@ public class Button : MonoBehaviour
     {
         blockerWall = gameObject.GetComponentInParent<BlockerWall>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
-        sprite.color = Color.yellow;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        sprite.color = Color.red;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
