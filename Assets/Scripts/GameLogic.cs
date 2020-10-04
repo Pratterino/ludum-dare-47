@@ -16,18 +16,20 @@ public class GameLogic : MonoBehaviour
         audioLogic = GetComponent<AudioLogic>();
         allCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
         winText.enabled = false;
-        UpdateText();
+        UpdateText(true);
         print(allCoins);
     }
 
-    public void UpdateText()
+    public void UpdateText(bool first = false)
     {
         coinsLeft = GameObject.FindGameObjectsWithTag("Coin").Length - 1;
         print("point");
 
-        coinText.text = $"Points: {allCoins - coinsLeft}/{allCoins}";
+        
+        if (first) coinText.text = $"Points: 0/{allCoins}";
+        else coinText.text = $"Points: {allCoins - coinsLeft}/{allCoins}";
 
-        if (allCoins - coinsLeft <= 0) Won();
+        if (allCoins - coinsLeft == allCoins) Won();
     }
 
     private void Won()

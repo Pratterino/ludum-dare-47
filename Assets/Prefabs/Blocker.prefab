@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 854225783
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb7dd623650e3fc4d8ad7dbe395381d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c3cfd8694213aa40b5c48ee5e8342be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -258,6 +258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7797487380497596039}
     m_Modifications:
+    - target: {fileID: 353698331974604916, guid: dd28315c8cede184e96c090f7306dab1, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 353698331974604917, guid: dd28315c8cede184e96c090f7306dab1, type: 3}
       propertyPath: blockerWall
       value: 
@@ -308,6 +312,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 353698331974604922, guid: dd28315c8cede184e96c090f7306dab1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 353698331974604922, guid: dd28315c8cede184e96c090f7306dab1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 353698331974604922, guid: dd28315c8cede184e96c090f7306dab1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 353698331974604923, guid: dd28315c8cede184e96c090f7306dab1, type: 3}
+      propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 353698331974604923, guid: dd28315c8cede184e96c090f7306dab1, type: 3}
+      propertyPath: m_MaskInteraction
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
